@@ -1,0 +1,19 @@
+owner: Paradrop
+date: 2015-07-30
+name: virtual-router
+description: |
+    This app launches a virtual wifi AP.
+
+net:
+    wifi: 
+        type: wifi
+        intfName: wlan0
+        ssid: Paradrop-Network
+        key: ParadropRocks!
+        dhcp:
+            lease: 12h
+            start: 100
+            limit: 50
+
+dockerfile: 
+    local: Dockerfile
