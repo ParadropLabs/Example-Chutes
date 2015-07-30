@@ -1,0 +1,27 @@
+owner: Nick Hyatt
+date: 2015-07-30
+name: parental-controls
+description: |
+    This app launches a wifi AP which filters http web content using 
+    Dansguardian and all traffic using OpenDNS Family Shield.
+
+net:
+    wifi: 
+        type: wifi
+        intfName: wlan0
+        ssid: Paradrop-Parental-Controls
+        dhcp:
+            lease: 12h
+            start: 100
+            limit: 50
+            dns:
+                - 208.67.222.123
+                - 208.67.220.123
+
+dockerfile: 
+    local: Dockerfile
+
+host_config:
+    dns:
+        - 208.67.222.123
+        - 208.67.220.123
