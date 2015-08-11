@@ -1,0 +1,12 @@
+owner: Paradrop
+date: 2015-07-30
+name: hello-world 
+description: |
+    This app launches nginx serving a static html page.
+
+dockerfile: 
+    local: Dockerfile
+
+host_config:
+    port_bindings:
+        80: 9000
